@@ -4,10 +4,10 @@
 #
 # $Id: defines.py 224 2007-10-12 19:51:45Z aportnoy $
 #
-# This program is free software; you can redistribute it and/or modify it
-# under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License,
-# or (at your option) any later version.
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public
+# License as published by the Free Software Foundation;
+# either version 2 of the License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -40,7 +40,6 @@
 @organization: www.openrce.org
 """
 
-from pydbg.my_ctypes import *
 from pydbg.windows_h import *
 
 # Manually declare entities from Tlhelp32.h
@@ -51,8 +50,7 @@ TH32CS_SNAPPROCESS = 0x00000002
 TH32CS_SNAPTHREAD = 0x00000004
 TH32CS_SNAPMODULE = 0x00000008
 TH32CS_INHERIT = 0x80000000
-TH32CS_SNAPALL = (TH32CS_SNAPHEAPLIST | TH32CS_SNAPPROCESS
-                  | TH32CS_SNAPTHREAD | TH32CS_SNAPMODULE)
+TH32CS_SNAPALL = (TH32CS_SNAPHEAPLIST | TH32CS_SNAPPROCESS | TH32CS_SNAPTHREAD | TH32CS_SNAPMODULE)
 
 
 class THREADENTRY32(Structure):
@@ -81,6 +79,7 @@ class PROCESSENTRY32(Structure):
         ('szExeFile', CHAR * 260),
     ]
 
+
 class MODULEENTRY32(Structure):
     _fields_ = [
         ("dwSize", DWORD),
@@ -95,6 +94,7 @@ class MODULEENTRY32(Structure):
         ("szExePath", CHAR * 260),
     ]
 
+
 class _MIB_TCPROW_OWNER_PID(Structure):
     _fields_ = [
         ("dwState", DWORD),
@@ -104,6 +104,7 @@ class _MIB_TCPROW_OWNER_PID(Structure):
         ("dwRemotePort", DWORD),
         ("dwOwningPid", DWORD),
     ]
+
 
 class MIB_TCPTABLE_OWNER_PID(Structure):
     _fields_ = [
@@ -118,6 +119,7 @@ class _MIB_UDPROW_OWNER_PID(Structure):
         ("dwLocalPort", DWORD),
         ("dwOwningPid", DWORD)
     ]
+
 
 class MIB_UDPTABLE_OWNER_PID(Structure):
     _fields_ = [

@@ -9,7 +9,7 @@
 
 # PEDRAM - line swap ... have to patch in our own __reduce__ definition to each ctype.
 #from ctypes import *
-from my_ctypes import *
+from pydbg.my_ctypes import *
 
 # C:/PROGRA~1/gccxml/bin/Vc6/Include/winnt.h 4188
 class _TOKEN_PRIVILEGES(Structure):
